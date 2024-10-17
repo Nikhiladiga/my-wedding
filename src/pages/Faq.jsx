@@ -20,7 +20,15 @@ const Faq = () => {
         alignItems="center"
         gap={8}
       >
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.900" size="lg">
+        <Heading
+          fontStyle="oblique"
+          textDecoration="underline"
+          fontFamily="Libre Bodoni"
+          size="xl"
+        >
+          FAQs
+        </Heading>
+        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
           What should I wear? 👔
         </Heading>
         <Text color="blackAlpha.800">
@@ -30,7 +38,7 @@ const Faq = () => {
 
         <Divider orientation="horizontal" borderColor="gray.200" width="50%" />
 
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.900" size="lg">
+        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
           When and where is the wedding? 👰🏻‍♀️
         </Heading>
         <Text color="blackAlpha.800">
@@ -42,7 +50,7 @@ const Faq = () => {
 
         <Divider width="50%" orientation="horizontal" borderColor="gray.200" />
 
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.900" size="lg">
+        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
           What will the weather be like this time of year? 🌤️
         </Heading>
         <Text color="blackAlpha.800" width="60%" lineHeight={2}>
@@ -54,7 +62,7 @@ const Faq = () => {
 
         <Divider width="50%" orientation="horizontal" borderColor="gray.200" />
 
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.900" size="lg">
+        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
           When is the reception? 🎤
         </Heading>
         <Text color="blackAlpha.800" width="60%">
