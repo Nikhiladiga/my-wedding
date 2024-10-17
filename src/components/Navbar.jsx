@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Image } from "@chakra-ui/react";
-import React from "react";
 import logo from "/logo.svg";
 import { Link } from "react-router-dom";
 import { AddToCalendarButton } from "add-to-calendar-button-react";
@@ -7,7 +6,7 @@ import { AddToCalendarButton } from "add-to-calendar-button-react";
 const Navbar = () => {
   return (
     <Box
-      backgroundColor="transparent"
+      backgroundColor={"transparent"}
       top={0}
       left={0}
       right={0}

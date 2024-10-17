@@ -9,27 +9,24 @@ import About from "./pages/About.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Faq from "./pages/Faq.jsx";
 import Landing from "./pages/Landing.jsx";
-import Layout from "./components/Layout.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     errorElement: <div>Error 404, Not found!</div>,
-    children: [
-      {
-        path: "/",
-        element: <Landing />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/gallery",
-        element: <Gallery />,
-      },
-    ],
+  },
+  {
+    path: "/",
+    element: <Landing />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/gallery",
+    element: <Gallery />,
   },
   {
     path: "/faq",
