@@ -21,18 +21,12 @@ const Landing = () => {
         height="100%"
         gap={10}
       >
-        <Heading fontFamily="Libre Bodoni" color="whiteAlpha.800" size="lg">
+        <Heading fontFamily="Roboto" color="whiteAlpha.800" size="lg">
           We're getting married! 💍
         </Heading>
         <Box height="7.5rem" display="flex" alignItems="center">
           {" "}
-          {/* Add this Box */}
-          <Heading
-            fontFamily="Libre Bodoni"
-            color="whiteAlpha.800"
-            size="4xl"
-            textAlign="center"
-          >
+          <Heading color="whiteAlpha.800" size="4xl" textAlign="center">
             <Typewriter
               loop
               words={["Meghana & Nikhil"]}
@@ -41,7 +35,7 @@ const Landing = () => {
             />
           </Heading>
         </Box>
-        <Heading fontFamily="Libre Bodoni" color="whiteAlpha.800" size="lg">
+        <Heading fontFamily="Roboto" color="whiteAlpha.800" size="lg">
           Dec 5, 2024
         </Heading>
       </Flex>
