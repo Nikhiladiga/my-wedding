@@ -1,85 +1,171 @@
 import React from "react";
-import { Box, Flex, Heading, Link, Text, Divider } from "@chakra-ui/react";
+import {
+  Box,
+  VStack,
+  Heading,
+  Text,
+  Container,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Button,
+} from "@chakra-ui/react";
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
 import faq from "/faq.png";
 
 const Faq = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
-      height="100vh"
-      width="100vw"
-      backgroundPosition={"center"}
-      backgroundRepeat={"no-repeat"}
-      backgroundSize="cover"
+      minHeight="100vh"
+      width="100%"
       backgroundImage={faq}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      py={12}
     >
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        height="100%"
-        width="100%"
-        alignItems="center"
-        gap={8}
+      <Container
+        maxW="container.md"
+        bg="whiteAlpha.800"
+        borderRadius="lg"
+        p={8}
+        boxShadow="xl"
       >
-        <Heading
-          fontStyle="oblique"
-          textDecoration="underline"
-          fontFamily="Libre Bodoni"
-          size="xl"
+        <Button
+          leftIcon={<ArrowBackIcon />}
+          onClick={() => navigate("/")}
+          mb={6}
+          bg="pink.100"
+          _hover={{ bg: "pink.200" }}
+          variant="solid"
         >
-          FAQs
-        </Heading>
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
-          What should I wear? 👔
-        </Heading>
-        <Text color="blackAlpha.800">
-          Please feel comfortable to wear whatever you want. We value your
-          presence more than your attire.
-        </Text>
+          Back to Home
+        </Button>
 
-        <Divider orientation="horizontal" borderColor="gray.200" width="50%" />
-
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
-          When and where is the wedding? 👰🏻‍♀️
-        </Heading>
-        <Text color="blackAlpha.800">
-          The wedding is on Dec 5th in{" "}
-          <Link color={"blue.600"} href="https://g.co/kgs/nsJXzLE">
-            Govinda Kalyana Mantapa, Udupi.
-          </Link>
-        </Text>
-
-        <Divider width="50%" orientation="horizontal" borderColor="gray.200" />
-
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
-          What will the weather be like this time of year? 🌤️
-        </Heading>
-        <Text color="blackAlpha.800" width="60%" lineHeight={2}>
-          December marks the beginning of the winter season in Udupi, with the
-          temperature ranging between nearly 21.6C to 31C. The weather is
-          pleasant, with clear skies and a gentle breeze, making it an ideal
-          time for outdoor activities and sightseeing.
-        </Text>
-
-        <Divider width="50%" orientation="horizontal" borderColor="gray.200" />
-
-        <Heading fontFamily="Libre Bodoni" color="blackAlpha.800" size="lg">
-          When is the reception? 🎤
-        </Heading>
-        <Text color="blackAlpha.800" width="60%">
-          The reception is on Dec 6th in{" "}
-          <Link color={"blue.600"} href="https://g.co/kgs/67VrQEp">
-            Anantha Padmanabha Temple, Perdur.{" "}
-          </Link>
-          There is a music concert by{" "}
-          <Link
-            color={"blue.600"}
-            href="https://en.wikipedia.org/wiki/Vidyabhushana"
+        <VStack spacing={8} align="stretch">
+          <Heading
+            as="h1"
+            size="2xl"
+            textAlign="center"
+            fontFamily="Libre Bodoni"
+            color="gray.800"
+            pb={4}
+            borderBottom="2px solid"
+            borderColor="pink.200"
           >
-            Dr Vidya Bhushana
-          </Link>{" "}
-          on this day at 10:30am.
-        </Text>
-      </Flex>
+            FAQs
+          </Heading>
+          <Accordion allowMultiple>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="gray.700"
+                  >
+                    What should I wear? 👔
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Please feel comfortable to wear whatever you want. We value your
+                presence more than your attire.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="gray.700"
+                  >
+                    When and where is the wedding? 👰🏻‍♀️
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                The wedding is on Dec 5th in Govinda Kalyana Mantapa, Udupi.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="gray.700"
+                  >
+                    What will the weather be like this time of year? 🌤️
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                December marks the beginning of the winter season in Udupi, with
+                the temperature ranging between nearly 21.6C to 31C. The weather
+                is pleasant, with clear skies and a gentle breeze, making it an
+                ideal time for outdoor activities and sightseeing.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="gray.700"
+                  >
+                    When is the reception? 🎤
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                The reception is on Dec 6th in Anantha Padmanabha Temple,
+                Perdur. There is a music concert by Dr Vidya Bhushana on this
+                day at 10:30am.
+              </AccordionPanel>
+            </AccordionItem>
+
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="gray.700"
+                  >
+                    Is there any transportation arranged on the wedding day? 🚎
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Yes. We have arranged a bus from Perdur to the wedding venue
+                that leaves at sharp 8:00 am.
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          ;
+        </VStack>
+      </Container>
     </Box>
   );
 };

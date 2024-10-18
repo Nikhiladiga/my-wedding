@@ -10,7 +10,7 @@ const Gallery = () => {
   const [index, setIndex] = useState(-1);
 
   return (
-    <Box width="90%" margin="auto" marginTop="10">
+    <Box width="90%" margin="auto" marginTop="10" backgroundColor="#FEF4F2">
       <RowsPhotoAlbum
         onClick={({ index: current }) => setIndex(current)}
         targetRowHeight={150}
