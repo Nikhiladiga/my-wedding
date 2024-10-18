@@ -33,7 +33,7 @@ const Navbar = () => {
           <AddToCalendarButton
             size="4"
             name="Meghana & Nikhil wedding 💍"
-            options={["Apple", "Google"]}
+            options={["Google"]}
             location="Govinda Kalyana Mantapa, 8PHV+WM2, Brahmagiri, Udupi, Karnataka 576101, India"
             startDate="2024-12-05"
             startTime="10:30"
