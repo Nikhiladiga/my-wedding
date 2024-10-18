@@ -1,5 +1,4 @@
-import { Box, Button, Flex, Image } from "@chakra-ui/react";
-import logo from "/logo.svg";
+import { Box, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { AddToCalendarButton } from "add-to-calendar-button-react";
 
@@ -30,9 +29,6 @@ const Navbar = () => {
             FAQs
           </Link>
         </Flex>
-        <Link to="/">
-          <Image src={logo} />
-        </Link>
         <Box marginRight={4}>
           <AddToCalendarButton
             size="4"
